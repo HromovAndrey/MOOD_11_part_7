@@ -6,16 +6,26 @@
 #викликатися для виконання обраної операці
 class Calculator:
     def add(self, x, y):
-        return x + y
+        self._x = x
+        self._y = y
+        return self._x + self._y
 
     def subtract(self, x, y):
-        return x - y
+        self._x = x
+        self._y = y
+        return self._x - self._y
 
     def multiply(self, x, y):
-        return x * y
+        self._x = x
+        self._y = y
+        return self._x * self._y
+
 
     def divide(self, x, y):
-        return x / y
+        self._x = x
+        self._y = y
+        return self._x / self._y
+
 
     def not_divide(self, x, y):
         if y == 0:
