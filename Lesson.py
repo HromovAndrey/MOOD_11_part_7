@@ -20,11 +20,12 @@ class Calculator:
     @classmethod
     def divide(cls, x, y):
         if y == 0:
-            raise ValueError("На нкуль дилити не можна")
+            raise ValueError("На нуль дилити не можна")
         return x / y
 
     @classmethod
     def sum(cls, x, y):
         return cls.add(x, y)
 result = Calculator.sum(10, 5)
-print(result)  # Виведе: 15
+print(result)
+
