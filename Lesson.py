@@ -5,35 +5,26 @@
 #Об'єкт класу Calculator буде функтором, що може
 #викликатися для виконання обраної операці
 class Calculator:
-    def add(self, x, y):
-        self._x = x
-        self._y = y
-        return self._x + self._y
+    @classmethod
+    def add(cls, x, y):
+        return x + y
 
-    def subtract(self, x, y):
-        self._x = x
-        self._y = y
-        return self._x - self._y
+    @classmethod
+    def subtract(cls, x, y):
+        return x - y
 
-    def multiply(self, x, y):
-        self._x = x
-        self._y = y
-        return self._x * self._y
+    @classmethod
+    def multiply(cls, x, y):
+        return x * y
 
-
-    def divide(self, x, y):
-        self._x = x
-        self._y = y
-        return self._x / self._y
-
-
-    def not_divide(self, x, y):
+    @classmethod
+    def divide(cls, x, y):
         if y == 0:
-            raise ValueError("Неможливо поділити на нуль")
+            raise ValueError("На нкуль дилити не можна")
         return x / y
 
-
-print("Addition:", Calculator.add(6, 4))
-print("Subtraction:", Calculator.subtract(8, 2))
-print("Multiplication:", Calculator.multiply(7, 1))
-print("Division:", Calculator.divide(5, 9))
+    @classmethod
+    def sum(cls, x, y):
+        return cls.add(x, y)
+result = Calculator.sum(10, 5)
+print(result)  # Виведе: 15
