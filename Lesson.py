@@ -29,4 +29,4 @@ class File:
 file = File()
 file.size = 2048
 print("Розмір файлу:", file.size)
-print("Форматований розмір файлу:", file.size.formatted_size())  # Виведе: 2.00 KB
+print("Форматований розмір файлу:", file.size.formatted_size())
